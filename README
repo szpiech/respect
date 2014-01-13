@@ -1,0 +1,22 @@
+respect - A program for computing and plotting uni- and bi-variate MAF spectrums
+
+--ndr <int> number of non-data rows that preceed the data
+--ndc <int> number of non-data columns that preceed the data
+-l <int> number of loci
+-r <int> the number of chromosomes sampled
+	(for N individuals, this is 2N for diploid)
+-s <int> the non-data column index by which populations are determined
+-n <int> number of alleles to resample
+--threads <int> number of threads to spawn
+--seed <int> seed for the RNG, an RNG is allocated for each thread
+	and is seeded with seed + thread id (starting at 0)
+-f <string> datafile
+--overflow <int> if any bins spill over this number, they are colored in the largest bin color
+--num-bins <int> number of bin colors to use in the bivariate plots
+-o <string> uses this as the base name for output files
+--bivariate-all when present the bivariate spectrum is 
+	calculated pairwise between all populations
+--bivariate-pop1 <string> calculates the bivariate spectrum between the population defined here
+	and the one defined by --pop2
+--pop2 <string> companion command to --bivariate-pop1
+--help when present prints this help
